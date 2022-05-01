@@ -1,7 +1,7 @@
 import * as Tone from 'tone'
 import { useState, useEffect } from 'react'
-import { createChord, useFractal, SEVENFOUR } from '../../components/Fractalis'
-import { Chordio, Scalio } from '../../components/Musicae'
+import { createChord, useFractal, SEVENFOUR } from '../../components/Tone/Fractalis'
+import { Chordio, Scalio } from '../../components/Tone/Musicae'
 
 export function ScalaeReductio({frequensis, temporis}) {
   return (<>

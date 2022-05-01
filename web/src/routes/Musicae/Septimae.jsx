@@ -1,6 +1,6 @@
 import * as Tone from 'tone'
 import { useState, useEffect } from 'react'
-import { createChord, useFractal, SEVENFOUR } from '../../components/Fractalis'
+import { createChord, useFractal, SEVENFOUR } from '../../components/Tone/Fractalis'
 
 export function Chordio({frequensis}) {
     console.log(frequensis)
