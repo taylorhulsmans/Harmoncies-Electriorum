@@ -1,4 +1,6 @@
 import React, { useRef, useState } from 'react'
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks  } from 'body-scroll-lock';
+
 import {
 	Engine,
 	Scene,
@@ -20,7 +22,10 @@ const SpinningBox = (props) => {
 
 	const [hovered, setHovered] = useState(false)
 	useHover(
-		() => setHovered(true),
+		() =>{
+      setHovered(true)
+      disableBodyScroll(boxRef.current)
+    },
 		() => setHovered(false),
 		boxRef
 	)
@@ -53,9 +58,30 @@ const SpinningBox = (props) => {
 	)
 }
 
-export const SceneWithSpinningBoxes = () => (
-	<div>
-		<Engine antialias adaptToDeviceRatio canvasId="babylonJS">
+export const SceneWithSpinningBoxes = () => {
+
+  const handleScroll = (event) => {
+    if (event.deltaY > 0 ) {
+      decreaseValue()
+    } else {
+      decreaseValue()
+    }
+  }
+
+  const enableScroll = (event) => {
+    document.removeEventListener('wheel', (e) => e.preventDefault(), false )
+  }
+  const disableScroll = (event) => {
+    document.addEventListener('wheel', (e) => e.preventDefault(), { passive: false } )
+  }
+
+  return (
+	<div
+    onWheel={handleScroll}
+    onMouseEnter={disableScroll}
+    onMouseLeave={enableScroll}
+  >
+		<Engine antialias  canvasId="babylonJS">
 			<Scene>
 				<arcRotateCamera
 					name="camera1"
@@ -85,3 +111,4 @@ export const SceneWithSpinningBoxes = () => (
 		</Engine>
 	</div>
 )
+}

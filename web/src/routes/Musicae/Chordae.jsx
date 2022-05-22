@@ -20,6 +20,7 @@ export default function Chordae() {
         }}>{chordum ? "a causae renovare" : 'Habilito Harmonicarum' }
       </button><br/>
       <Link to="Septimae">Septimae</Link><br/>
+      <Link to="Undecimae">Undecimae</Link><br/>
       <Link to="Ptolemicarum">Ptolemicarum</Link><br/>
       <Link to="Cellae">Cellae</Link><br/>
       <Link to="Wildbergicarum">Wildbergicarum</Link><br/>
