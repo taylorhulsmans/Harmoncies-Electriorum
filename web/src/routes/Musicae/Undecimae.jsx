@@ -45,8 +45,14 @@ export default function Undecimus() {
       <Chordio frequensis={note(9,5)} />9:5<br />
       <Chordio frequensis={note(20,11)} />20:11<br />
       <Chordio frequensis={note(11,6)} />11:6<br />
-
-
+      <br/>
+      <h3>Tonalities</h3>
+      <Chordio frequensis={[2640, 2970, 3300, 3630, 3960, unity]}/><br/>
+      <Chordio frequensis={[3080, 3465, 3850, 4235, unity, 2695]}/><br/>
+      <Chordio frequensis={[3360, 3780, 4200, unity, 2520, 2940]}/><br/>
+      <Chordio frequensis={[3696, 4158, unity, 2541, 2772, 3234]}/><br/>
+      <Chordio frequensis={[4106.6667, unity, 2566.6667, 2823.3334, 3080, 3593.3334]}/><br/>
+      <Chordio frequensis={[unity, 2598.75, 2887.5, 3176.25, 3465, 4042.5]}/><br/>
 
     </div>
   )
