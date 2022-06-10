@@ -28,6 +28,9 @@ import IoannisDee from './routes/Geometriae/IoannisDee'
 import FranciscoFlussateCandalla from './routes/Geometriae/FranciscoFlussateCandalla'
 import VorticibusRodin from './routes/Geometriae/VorticibusRodin'
 
+import Cartographica from './routes/Cartographica/Cartographica'
+import Mercator from './routes/Cartographica/Mercator/Mercator'
+
 const rootElement = document.getElementById("root");
 
 render(
@@ -56,7 +59,9 @@ render(
           <Route path="Ioannis-Dee" element={<IoannisDee />} />
           <Route path="Francisco-Flussate-Candalla" element={<FranciscoFlussateCandalla />} />
           <Route path="Vorticibus-Rodin" element={<VorticibusRodin />} />
-
+        </Route>
+        <Route path="/Cartographica" element={<Cartographica />}>
+          <Route path="Mercator" element={<Mercator />} />
         </Route>
 
       </Route>

@@ -8,7 +8,7 @@ export default function App() {
   return (
     <div>
 
-      <p>Tayloris Hulsmanis</p>
+      <p>Taylori Hulsmansis</p>
       <h1>Harmonices Electriorum</h1>
       <h2>Expositio harmoniae geometricae</h2>
       <Nav>Contenta</Nav>
@@ -23,6 +23,7 @@ export default function App() {
         <Link to="/Musicae">Musicae</Link> |{" "}
         <Link to="/Linguae-Latinae">Linguae Latinae</Link> |{" "}
         <Link to="/Geometriae">Geometriae</Link> |{" "}
+        <Link to="/Cartographica">Cartographica</Link> |{" "}
       </Nav>
       <Outlet />
     </div>
